@@ -1,4 +1,4 @@
-NAME = 	SerenaMyLove
+NAME = Polymorphism
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp

@@ -1,4 +1,4 @@
-NAME = fixed
+NAME = NowWereTalking
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = main.cpp Fixed.cpp
