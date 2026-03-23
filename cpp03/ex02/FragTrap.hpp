@@ -7,7 +7,7 @@ class FragTrap : public ClapTrap
 {
 public:
 	FragTrap();
-	~FragTrap();
+	virtual ~FragTrap();
 	FragTrap(const FragTrap &other);
 	FragTrap(const std::string &name);
 	FragTrap &operator=(const FragTrap &other);
