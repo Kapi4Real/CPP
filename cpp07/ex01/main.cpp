@@ -1,23 +1,27 @@
+#include "iter.hpp"
 #include <iostream>
-#include <cstddef>
+#include <string>
 
 template <typename T>
-void iter(T* array, size_t length, void (*func)(T const&))
+void printValue(const T& value)
 {
-    for (size_t i = 0; i < length; ++i)
-        func(array[i]);
+	std::cout << value << " ";
 }
 
-template <typename T>
-void printValue(T const& value)
+void addOne(int& value)
 {
-    std::cout << value << " ";
+	++value;
 }
 
 int main()
 {
-    int values[] = {1, 2, 3, 4};
-    iter(values, 4, printValue);
-    std::cout << std::endl;
-    return 0;
+	int values[] = {1, 2, 3, 4};
+	iter(values, 4, addOne);
+	iter<int>(values, 4, printValue<int>);
+	std::cout << std::endl;
+
+	const std::string words[] = {"templates", "work", "with", "const"};
+	iter<std::string const>(words, 4, printValue<std::string const>);
+	std::cout << std::endl;
+	return 0;
 }
